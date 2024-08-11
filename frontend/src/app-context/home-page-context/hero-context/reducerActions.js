@@ -1,0 +1,1 @@
+export const ASSIGN_HERO_DATA = "ASSIGN_HERO_DATA";

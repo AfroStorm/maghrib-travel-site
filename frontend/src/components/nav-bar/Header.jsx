@@ -16,6 +16,9 @@ const StyledDiv = styled.div`
     justify-content: center;
     gap: 0.5rem;
     padding-left: 0.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
   }
 
   & .brand-name {
@@ -34,6 +37,7 @@ const StyledDiv = styled.div`
     font-size: 2.5rem;
     color: var(--primary);
     padding-right: 0.5rem;
+    cursor: pointer;
   }
 
   & .hamburger-menu svg {
@@ -54,17 +58,21 @@ const StyledDiv = styled.div`
 `;
 
 const Header = () => {
-  const { brandData, handleMobileMenu } = useNavBarContext();
+  const { brandData, handleMobileMenu, handleCurrentPage } = useNavBarContext();
   return (
     <StyledDiv>
       {brandData &&
         brandData.map((item) => {
           const { name, image } = item;
           return (
-            <div key={nanoid()} className="brand-container">
+            <button
+              key={nanoid()}
+              onClick={() => handleCurrentPage("/home")}
+              className="brand-container"
+            >
               <h4 className="brand-name">{name}</h4>
               <IconComponent iconName={image} />
-            </div>
+            </button>
           );
         })}
 

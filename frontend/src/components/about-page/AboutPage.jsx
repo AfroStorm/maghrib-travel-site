@@ -21,7 +21,7 @@ const StyledMain = styled.section`
 
   & img {
     height: auto !important; // slider wont react to size changes without forcing it
-    object-fit: contain;
+    object-fit: cover;
   }
 
   & .center-div {

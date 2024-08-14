@@ -6,7 +6,6 @@ const StyledNav = styled.nav`
   width: 100vw;
   background: var(--gray-100);
   padding: 2rem 0;
-  box-shadow: var(--shadow-300);
 
   .center-div {
     max-width: var(--max-width-md);

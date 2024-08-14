@@ -1,15 +1,15 @@
-# Dockerfile for frontend
 FROM node
 
 WORKDIR /app
 
-COPY ./package.json ./
+COPY ./package*.json ./
+
 RUN npm install
 
 COPY . .
 
 USER node:node
 
-EXPOSE 5173
+EXPOSE 5174
 
-CMD [ "npm", "run", "dev" ]
+CMD [ "npm","run","dev" ]

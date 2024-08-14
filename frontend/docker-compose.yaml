@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - 5174:5174
+    command: ["npm", "run", "dev"]

@@ -1,7 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+import ReactDOM from "react-dom/client";
 import "react-toastify/dist/ReactToastify.css";
 import { NavBarProvider } from "./app-context/nav-bar-context/navBarContext.jsx";
 import { HeroProvider } from "./app-context/home-page-context/hero-context/heroContext.jsx";
@@ -14,8 +15,8 @@ import { FormDataProvider } from "./app-context/home-page-context/form-data-cont
 import { AboutPageProvider } from "./app-context/about-page-context/AboutPageContext.jsx";
 import { DestinationPageProvider } from "./app-context/book-now-context/destinationPageContext.jsx";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
     <NavBarProvider>
       <HeroProvider>
         <AboutProvider>
@@ -37,5 +38,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         </AboutProvider>
       </HeroProvider>
     </NavBarProvider>
-  </React.StrictMode>
+  </StrictMode>
 );

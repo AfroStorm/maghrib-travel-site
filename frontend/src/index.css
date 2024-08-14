@@ -59,8 +59,12 @@ html {
   --green-800: #004d2a;
   --green-900: #022716;
 
+  /* dark theme colors good on bright/dark backgrounds */
+  --darkTheme-teal: #008080;
+
   --primary: #8d493a;
   --secondary: #d0b8a8;
+  --secondary-dark: #b79e90;
   --accent-1: #dfd3c3;
   --accent-2: #f8ede3;
 
@@ -83,8 +87,9 @@ html {
   --text-shadow-100: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
   /* container width */
-  --fluid-width-90: 90%;
-  --fluid-width-80: 80%;
+  --view-width: 100vw;
+  --fluid-width-90: 90vw;
+  --fluid-width-80: 80vw;
 
   --max-width-xxs: 374.98px;
   --max-width-xs: 575.98px;
@@ -100,6 +105,56 @@ html {
   /* transitions */
   --transition-quick: ease 0.3s;
   --transition-slow: ease 0.9s;
+}
+
+/* inknut-antiqua fonts */
+.inknut-antiqua-light {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inknut-antiqua-regular {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inknut-antiqua-medium {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inknut-antiqua-semibold {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.inknut-antiqua-bold {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inknut-antiqua-extrabold {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.inknut-antiqua-black {
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* pacifico font */
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* input fields */
@@ -217,25 +272,20 @@ html {
 }
 /* font classes */
 
-.wix-madefor-text-custom {
-  font-family: "Wix Madefor Text", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400; /* Customize the weight as needed */
-  font-style: normal;
-}
-
-.luckiest-guy-regular {
-  font-family: "Luckiest Guy", cursive;
-  font-weight: 400;
-  font-style: normal;
+/* dark mode toggle class */
+.dark-mode {
+  background: var(--gray-800);
+  color: var(--gray-100);
 }
 
 body {
   background: var(--gray-100);
-  font-family: "Wix Madefor Text", sans-serif;
-  font-weight: 400; /* Set the default weight as desired */
+  font-family: "Inknut Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
   line-height: 1;
   color: var(--textColor);
+  transition: var(--transition-slow);
 }
 p {
   margin: 0;
@@ -252,25 +302,46 @@ h5 {
 }
 
 h1 {
-  font-size: 3.052rem;
+  font-size: clamp(2rem, 5vw, 5rem); /* Large heading */
 }
 
 h2 {
-  font-size: 2.441rem;
+  font-size: clamp(1.5rem, 3vw, 3rem); /* Medium heading */
 }
 
 h3 {
-  font-size: 1.953rem;
+  font-size: clamp(1.25rem, 2.5vw, 2.5rem); /* Small heading */
 }
 
 h4 {
-  font-size: 1.563rem;
+  font-size: clamp(1rem, 2vw, 2rem); /* Extra small heading */
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.5rem); /* Tiny heading */
 }
 
+/* BIGGER FONTS */
+/* h1 {
+  font-size: clamp(3rem, 6vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+ */
 .text {
   margin-bottom: 1.5rem;
   max-width: 40em;
@@ -283,6 +354,7 @@ small,
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul {
   list-style-type: none;

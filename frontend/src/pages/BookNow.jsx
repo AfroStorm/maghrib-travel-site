@@ -1,4 +1,4 @@
-import BookNowPage from "../components/book-now/BookNowPage";
+import BookNowPage from "../components/book-now-page/BookNowPage";
 
 const BookNow = () => {
   return (

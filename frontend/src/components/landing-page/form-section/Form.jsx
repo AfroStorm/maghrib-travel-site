@@ -6,7 +6,6 @@ const StyledSection = styled.section`
   display: grid;
   place-items: center;
   gap: 2rem;
-  height: 95vh;
   background: var(--gray-100);
 
   & .center-div {

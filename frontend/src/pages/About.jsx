@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import AboutPage from "../components/about-page/AboutPage";
 
 const About = () => {

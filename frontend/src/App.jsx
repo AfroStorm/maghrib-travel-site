@@ -8,7 +8,6 @@ const router = createBrowserRouter([
     element: <HomeLayout />,
     children: [
       {
-        path: "landing",
         element: <LandingPage />,
         index: true,
       },

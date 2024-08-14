@@ -6,12 +6,12 @@ const StyledDiv = styled.div`
     object-fit: cover;
   }
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     & img {
       height: auto !important; // slider wont react to size changes without forcing it
       object-fit: cover;
     }
-  }
+  } */
 `;
 
 const SingleSlide = ({ image }) => {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
   & img {
     height: auto !important; // slider wont react to size changes without forcing it
-    object-fit: contain;
+    object-fit: cover;
   }
 
   @media screen and (min-width: 768px) {

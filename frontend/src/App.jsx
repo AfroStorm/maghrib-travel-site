@@ -11,6 +11,7 @@ const router = createBrowserRouter([
     children: [
       {
         element: <LandingPage />,
+        errorElement: <h2>a single page error occurred</h2>,
         index: true,
       },
 

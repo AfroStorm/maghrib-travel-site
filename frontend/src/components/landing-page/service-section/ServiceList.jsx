@@ -10,7 +10,7 @@ const StyledUl = styled.ul`
 
   @media screen and (min-width: 992px) {
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     gap: 2rem;
   }

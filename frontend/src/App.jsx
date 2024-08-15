@@ -1,11 +1,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { About, BookNow, HomeLayout, LandingPage } from "./pages";
+import { About, BookNow, HomeLayout, LandingPage, Error } from "./pages";
 import GlobalStyle from "./assets/global-styles/globalFonts";
 
+// implement error handling page
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       {
         element: <LandingPage />,
